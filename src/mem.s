@@ -167,17 +167,17 @@ bg_block:
     bx lr
 
 @------------------------------------------------------------------------
-check_fifo: @função que verifica se o fifo está cheio
+check_fifo: @função que verifica se a fifo está cheia
   sub sp, sp, #8    @reservando 8 bytes na pilha
   str r0, [sp, #4]
   str r1, [sp, #0]
   
   ldr r0, =mapped_address   @ Endereço mapeado
   ldr r0, [r0]
-checking:                   @label para verificar se o fifo está cheio
-  ldr r1, [r0, #0xb0]       @lendo o registrador de status do fifo
-  CMP r1, #1                @comparando o status do fifo com 1
-  beq checking              @se o fifo estiver cheio, volta para o label checking
+checking:                   @label para verificar se a fifo está cheia
+  ldr r1, [r0, #0xb0]       @lendo o registrador de status da fifo
+  CMP r1, #1                @comparando o status da fifo com 1
+  beq checking              @se a fifo estiver cheia, volta para a label checking
 
   ldr r0, [sp, #4]
   ldr r1, [sp, #0]
