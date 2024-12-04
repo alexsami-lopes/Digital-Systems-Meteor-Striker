@@ -608,7 +608,7 @@ O sistema utiliza o driver `/dev/mem` para acessar os registradores da FPGA via 
   - **3 bits para G (verde)**: 0–7.
   - **3 bits para R (vermelho)**: 0–7.
 - Exemplo:
-  - Cor `0b000000111` representa apenas azul no máximo.
+  - Cor `0b000000111` representa apenas vermelha no máximo.
 
 #### **Background (Tela 640x480)**
 - O **background** é dividido em **4800 quadrados de 8x8 pixels**.
