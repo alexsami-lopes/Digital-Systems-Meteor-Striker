@@ -601,7 +601,7 @@ O jogo utiliza sprites para representar elementos como meteoros, alvos, corpos c
     
 <figcaption>
 
-**Figura 12** - Sprite da placa DE1-SoC
+**Figura 12** - Alguns Sprites do Jogo
     </figcaption>
   </figure>
 </div>
