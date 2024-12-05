@@ -846,10 +846,6 @@ Apesar das vantagens, o uso de threads apresenta desafios significativos, inclui
    - Em sistemas com muitos núcleos, o gerenciamento eficiente de um grande número de threads pode ser difícil, especialmente em sistemas embarcados.
 
 </details>
-
-Aqui está a parte entre **Desafios das Threads** e **Testes**, corrigida e integrada ao documento:
-
-
 <details>
   <summary><b>Exemplo Básico de Utilização de Threads em C</b></summary>
 
