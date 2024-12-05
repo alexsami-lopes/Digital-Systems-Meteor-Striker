@@ -92,7 +92,8 @@ O problema a ser desenvolvido no Kit de desenvolvimento DE1-SoC deve atender às
 - [Testes](#testes)
   - [Polling dos botões](#polling-dos-botões)
   - [Jogo](#jogo)
-- [Conclusão](#conclusão)
+- [Análise Final](#análise-final)
+- [Materiais de Pesquisa Adicionais](#materiais-de-pesquisa-adicionais)
 
 </details>
 
@@ -1073,12 +1074,21 @@ Foram realizados testes para verificar:
 
 
 
-## Conclusão
+## Análise Final
 
 O projeto atendeu a todos os requisitos, mas há espaço para melhorias, como:
 - Aprimorar as animações para maior imersão.
 - Adicionar novos níveis para aumentar o desafio.
 - Explorar mais funcionalidades da GPU customizada.
+
+## Materiais de Pesquisa Adicionais
+- [Manual do Usuário DE1-SoC](datasheets/user_manual.pdf)
+- [Datasheet do Acelerômetro ADXL345](datasheets/Accelerometer.pdf)
+- [Material de base de pesquisa do Acelerômetro](https://github.com/VimfulDang/ADXL345-Accelerometer-DE1-SOC/tree/master)
+- [Trabalho de Conlusão de Curso de Gabriel Sá Barreto Alves](https://drive.google.com/file/d/1MlIlpB9TSnoPGEMkocr36EH9-CFz8psO/view)
+- [Material de pesquisa para criação do jogo](https://github.com/camilaqPereira/Car_Race_CoLenda/tree/main)
+- [Material de pesquisa para criação da biblioteca em assembly](https://github.com/LuisMarioRC/PBL2-SD-Tetris/blob/main/mapmem.s)
+- [Retornar ao Índice](#índice)
 
 
 
