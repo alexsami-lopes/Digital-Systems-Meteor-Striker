@@ -972,7 +972,7 @@ Meteoros são gerados aleatoriamente no topo da tela com velocidades e direçõe
 
 #### **Movimentação do plano de fundo**
 
-Para passar a sensação de movimento corpos celestiais giram em órbitas, cada um em uma órbida diferente de acordo com a Figura 1. Além disso, estrelas brilham a intervalos regulares em locais aleatórios da tela.
+Para passar a sensação de movimento corpos celestiais giram em órbitas, cada um em uma órbida diferente de acordo com a Figura 14. Além disso, estrelas brilham a intervalos regulares em locais aleatórios da tela.
 
 <div align="center">
   <figure>  
