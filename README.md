@@ -477,7 +477,7 @@ A forma de controle através do acelerômetro pode ser conferida na Figura 5.
 
 <div align="center">
   <figure>  
-    <img src="images/readme/videos/accelerometer_demo.gif" height="400px">
+    <img src="images/readme/videos/accel_demo.gif" height="400px">
     
 <figcaption>
 
