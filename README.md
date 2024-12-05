@@ -112,8 +112,8 @@ O problema a ser desenvolvido no Kit de desenvolvimento DE1-SoC deve atender às
 
 </details>
 
-<details>
-  <summary><h3>Compilação e Execução do jogo</h3></summary>
+
+### Compilação e Execução do jogo
 
 #### 1. Clonar o repositório
 Abra o terminal do seu dispositivo e execute o seguinte comando:
@@ -138,9 +138,6 @@ Ou ainda:
 ```bash
 make execute
 ```
-
-</details>
-
 
 
 ## Softwares utilizados
@@ -168,17 +165,56 @@ A linguagem Assembly é uma linguagem de programação de baixo nível que repre
 
 ### Compilador GCC
 
-O GCC (GNU Compiler Collection) é uma coleção de compiladores de código aberto amplamente usada para sistemas Unix-like e outros sistemas operacionais.
+O GCC (GNU Compiler Collection) é um conjunto de compiladores de código aberto desenvolvido pelo Projeto GNU, sendo uma ferramenta fundamental no desenvolvimento de software para sistemas Unix-like e outros sistemas operacionais.
 
-#### Características principais:
-- **Multiplataforma**: Suporte a diversos sistemas operacionais e arquiteturas de processadores.
-- **Linguagens Suportadas**: C, C++, Objective-C, Fortran, Ada, Go.
-- **Otimização de Código**: Oferece múltiplos níveis de otimização de desempenho.
+#### Características Principais
+- **Multiplataforma**: Suporta diversos sistemas operacionais e arquiteturas de processador
+- **Linguagens Suportadas**: C, C++, Objective-C, Fortran, Ada, Go
+- **Otimização de Código**: Oferece múltiplos níveis de otimização de desempenho
 
-Exemplo de comando de compilação:
+#### Flags de Compilação Comuns
+
+##### CFLAGS Explicadas
+- `-Wall`: Habilita todos os avisos do compilador
+- `-std=gnu99`: Define o padrão de linguagem C como GNU99
+- `-Wextra`: Adiciona avisos extras além dos habilitados por `-Wall`
+- `-pthread`: Adiciona suporte para programação multithread
+
+Exemplo de uso das CFLAGS:
 ```bash
 gcc -Wall -std=gnu99 -Wextra -pthread programa.c -o programa
 ```
+
+##### Bibliotecas Comuns
+- `-lintelfpgaup`: Biblioteca para desenvolvimento com FPGAs da Intel
+- `-lm`: Biblioteca matemática padrão do C
+
+Exemplo de compilação com bibliotecas:
+```bash
+gcc -Wall -std=gnu99 -Wextra -pthread programa.c -o programa -lintelfpgaup -lm
+```
+
+#### Exemplos de Uso Completo
+
+Compilação com todas as flags e bibliotecas:
+```bash
+gcc CFLAGS programa.c -o programa LIBS
+```
+
+Ou de forma expandida:
+```bash
+gcc -Wall -std=gnu99 -Wextra -pthread programa.c -o programa -lintelfpgaup -lm
+```
+
+#### Níveis de Otimização
+- `-O0`: Sem otimização (padrão)
+- `-O1`: Otimização básica
+- `-O2`: Otimização recomendada
+- `-O3`: Otimização agressiva
+- `-Os`: Otimização para tamanho do código
+
+#### História
+Criado por Richard Stallman em 1987, inicialmente como um compilador para C, o GCC evoluiu para se tornar uma coleção robusta de compiladores multi-linguagem, sendo crucial para o desenvolvimento de software livre.
 
 </details>
 
@@ -187,16 +223,30 @@ gcc -Wall -std=gnu99 -Wextra -pthread programa.c -o programa
 
 ### VS Code
 
-O Visual Studio Code (VS Code) é um editor de código-fonte desenvolvido pela Microsoft, gratuito e de código aberto. Ele é multiplataforma e oferece suporte a diversas linguagens de programação, sendo amplamente utilizado por desenvolvedores.
+O Visual Studio Code (VS Code) é um editor de código-fonte desenvolvido pela Microsoft, gratuito e de código aberto. Multiplataforma, suporta Windows, Linux e macOS, sendo popular entre desenvolvedores por sua leveza, versatilidade e grande ecossistema de extensões.
+
+#### Principais Características
+- **Gratuito e Open Source**: Desenvolvimento contínuo pela comunidade
+- **Suporte Multilinguagem**: Recursos avançados para diversas linguagens de programação
+- **Extensões**: Marketplace com milhares de complementos
+- **Depuração Integrada**: Ferramentas de debug nativas
+- **Controle de Versão**: Integração nativa com Git
+
+#### Recursos Principais
+- Autocompletar inteligente
+- Realce de sintaxe
+- Depuração integrada
+- Terminal incorporado
+- Git integrado
+- Customização via temas e configurações
+
+Acesse [documentação oficial programa](https://code.visualstudio.com/docs#vscode)
 
 </details>
 
 
 
 ## Kit de desenvolvimento DE1-SoC
-
-<details>
-  <summary><b>Visão geral da DE1-SoC</b></summary>
 
 ### Visão geral da DE1-SoC
 
@@ -225,14 +275,15 @@ A DE1-SoC é uma plataforma de desenvolvimento de sistemas embarcados projetada 
   <figure>  
     <img src="images/readme/de1_soc_img.png" width="600px">
     <figcaption>
-      <p align="center">
-        [**Figura 1** - Manual de Usuário da Placa DE1-SoC](https://fpgacademy.org/Downloads/DE1_SoC_User_Manual.pdf)
-      </p>
+      <p align="center"> 
+
+[**Figura 1** - Manual de Usuário da Placa DE1-SoC](https://fpgacademy.org/Downloads/DE1_SoC_User_Manual.pdf)
+
+</p>
     </figcaption>
   </figure>
 </div>
 
-</details>
 
 <details>
   <summary><b>Sistema computacional DE1-SoC</b></summary>
@@ -240,14 +291,16 @@ A DE1-SoC é uma plataforma de desenvolvimento de sistemas embarcados projetada 
 ### Sistema computacional DE1-SoC
 
 <div align="center">
-  <figure>
-    <img src="images/readme/diagrama_de_blocos_de1_soc.png" width="500px">
-    <figcaption>
-      <p align="center">
-        [**Figura 2** - Diagrama de Blocos da DE1-SoC](https://fpgacademy.org/Downloads/DE1_SoC_User_Manual.pdf)
-      </p>
-    </figcaption>
-  </figure>
+  <figure>  
+    <img src="images/readme/diagrama_de_blocos_de1_soc.png" width="500px">
+    <figcaption>
+      <p align="center">
+
+[**Figura 2** - Diagrama de Blocos da DE1-SoC](https://fpgacademy.org/Downloads/DE1_SoC_User_Manual.pdf)
+
+</p>
+    </figcaption>
+  </figure>
 </div>
 
 O diagrama de blocos do sistema computacional, apresentado na figura 2, explicita os componentes do Cyclone® V da Intel®, bem como suas conexões. O HPS inclui um processador ARM® Cortex-A9 MPCore™ de 2 núcleos com uma distribuição Linux embarcada destinada a processamentos de propósito geral, além da memória DDR3 e dos dispositivos periféricos. Já a FPGA possibilita uma variedade de implementações através da programação dos blocos lógicos.
@@ -358,17 +411,19 @@ void set_sprite_pixel(int position, unsigned int color) {
 
 ```
 
-Como pode ser visto um cósdigo significativamente menor. Muito menos linhas de código são necessárias normalmente em linguagem
+Como pode ser visto um código significativamente menor. Muito menos linhas de código são necessárias normalmente em linguagem
 
 <div align="center">
-  <figure>
-    <img src="images/readme/GPU-image.png" width="600px">
-    <figcaption>
-      <p align="center">
-        [**Figura 3** - Representação da arquitetura do processador gráfico](https://drive.google.com/file/d/1ogg3s2YPTvnRmb4YHDygRJ0bcZv8vG-N/view)
-      </p>
-    </figcaption>
-  </figure>
+  <figure>  
+    <img src="images/readme/GPU-image.png" width="600px">
+    <figcaption>
+      <p align="center">
+
+[**Figura 3** - Representação da arquitetura do processador gráfico](https://drive.google.com/file/d/1ogg3s2YPTvnRmb4YHDygRJ0bcZv8vG-N/view)
+
+</p>
+    </figcaption>
+  </figure>
 </div>
 
 </details>
@@ -390,14 +445,14 @@ Os dispositivos de entrada usados foram:
 Os conectores USB da DE1-SoC são gerenciados por um hub controlador que se comunica diretamente com o HPS. Foi conectado um mouse à primeira porta USB host da placa, conforme ilustrado na Figura 4.
 
 <div align="center">
-  <figure>
-    <img src="images/readme/videos/mouse_demo.gif" height="400px">
-    <figcaption>
-      <p align="center">
-        **Figura 4** - Mouse USB usado
-      </p>
-    </figcaption>
-  </figure>
+  <figure>  
+    <img src="images/readme/videos/mouse_demo.gif" height="400px">
+    
+<figcaption>
+
+**Figura 4** - Mouse USB usado
+    </figcaption>
+  </figure>
 </div>
 
 </details>
@@ -418,6 +473,19 @@ A biblioteca fornecida contém funções essenciais para configurar e operar o a
   - `ADXL345_init(uint8_t)`: Configura registros como taxa de amostragem e modos de operação.
   - `ADXL345_XYZ_Read(int16_t *)`: Lê valores de aceleração nos eixos X, Y e Z.
 
+A forma de controle através do acelerômetro pode ser conferida na Figura 5.
+
+<div align="center">
+  <figure>  
+    <img src="images/readme/videos/accelerometer_demo.gif" height="400px">
+    
+<figcaption>
+
+**Figura 5** - Demonstração do uso do acelerômetro ADXL345
+    </figcaption>
+  </figure>
+</div>
+
 </details>
 
 <details>
@@ -434,14 +502,16 @@ A DE1-SoC oferece quatro botões *push* conectados diretamente à FPGA e à GPU.
 Quando um botão é pressionado, o bit correspondente é setado para 0. Quando liberado, o bit retorna a 1.
 
 <div align="center">
-  <figure>
-    <img src="images/readme/push_buttons_img.png" width="600px">
-    <figcaption>
-      <p align="center">
-        [**Figura 5** - Circuito dos botões do tipo push](https://fpgacademy.org/Downloads/DE1_SoC_User_Manual.pdf)
-      </p>
-    </figcaption>
-  </figure>
+  <figure>  
+    <img src="images/readme/push_buttons_img.png"  width="600px">
+    <figcaption>
+      <p align="center">
+
+[**Figura 6** - Circuito dos botões do tipo Push](https://fpgacademy.org/Downloads/DE1_SoC_User_Manual.pdf)
+
+</p>
+    </figcaption>
+  </figure>
 </div>
 
 </details>
@@ -449,79 +519,88 @@ Quando um botão é pressionado, o bit correspondente é setado para 0. Quando l
 
 ## O Jogo
 
-<details>
-  <summary><b>Interface do Jogo</b></summary>
-
 ### Interface do Jogo
 
 A seguir, são apresentadas as interfaces exibidas para o jogador no monitor VGA e suas possíveis transições, bem como os cenários em que o uso dos botões interfere no estado do jogo.
 
 - Tela inicial:
 <div align="center">
-  <figure>
-    <img src="images/readme/cover.png" width="600px">
-    <figcaption>
-      **Figura 6** - Tela inicial
-    </figcaption>
-  </figure>
+  <figure>  
+    <img src="images/readme/cover.png" width="600px">
+    
+<figcaption>
+
+**Figura 7** - Tela inicial
+    </figcaption>
+  </figure>
 </div>
 
 - Tela do menu:
 <div align="center">
-  <figure>
-    <img src="images/readme/screenshots/menu_pic.jpg" width="600px">
-    <figcaption>
-      **Figura 7** - Tela do menu em execução
-    </figcaption>
-  </figure>
+  <figure>  
+    <img src="images/readme/screenshots/menu_pic.jpg" width="600px">
+    
+<figcaption>
+
+**Figura 8** - Tela do menu em execução
+    </figcaption>
+  </figure>
 </div>
 
 - Partida em execução:
 <div align="center">
-  <figure>
-    <img src="images/readme/videos/game_demo.gif" width="600px">
-    <figcaption>
-      **Figura 8** - Tela de uma partida em execução
-    </figcaption>
-  </figure>
+  <figure>  
+    <img src="images/readme/videos/game_demo.gif" width="600px">
+    
+<figcaption>
+
+**Figura 9** - Tela de uma partida em execução
+    </figcaption>
+  </figure>
 </div>
 
 - Tela de pausa:
 <div align="center">
-  <figure>
-    <img src="images/readme/screenshots/pause_pic.jpg" width="600px">
-    <figcaption>
-      **Figura 9** - Tela de pausa
-    </figcaption>
-  </figure>
+  <figure>  
+    <img src="images/readme/screenshots/pause_pic.jpg" width="600px">
+    
+<figcaption>
+
+**Figura 10** - Tela de pausa
+    </figcaption>
+  </figure>
 </div>
 
 - Tela de vitória:
 <div align="center">
-  <figure>
-    <img src="images/readme/trophy_img.png" width="600px">
-    <figcaption>
-      **Figura 10** - Tela de vitória
-    </figcaption>
-  </figure>
+  <figure>  
+    <img src="images/readme/trophy_img.png" width="600px">
+    
+<figcaption>
+
+**Figura 11** - Tela de vitória
+    </figcaption>
+  </figure>
 </div>
 
-</details>
+
 
 <details>
   <summary><b>Elementos do Jogo</b></summary>
 
 ### Elementos do Jogo
 
-O jogo utiliza sprites para representar elementos como meteoros e carros. A Figura 15 ilustra alguns exemplos desses sprites.
+O jogo utiliza sprites para representar elementos como meteoros, alvos, corpos celestes, estrelas, números e elementos do menu. A Figura 12 ilustra um exemplo desses sprites.
 
 <div align="center">
-  <figure>
-    <img src="images/readme/sprite_de1-soc_img.png" width="600px">
-    <figcaption>
-      **Figura 11** - Sprite da placa DE1-SoC
-    </figcaption>
-  </figure>
+  <figure>  
+    <img src="images/readme/sprite_de1-soc_img.png" width="600px">
+    
+<figcaption>
+
+**Figura 12** - Sprite da placa DE1-SoC
+    </figcaption>
+  </figure>
 </div>
 
 </details>
@@ -540,12 +619,14 @@ Dois jogadores competem para eliminar 10 meteoros antes do adversário. Cada jog
 ## Solução Geral
 
 <div align="center">
-  <figure>
-    <img src="images/readme/logica_do_jogo_img.png" width="600px">
-    <figcaption>
-      **Figura 12** - Esquema em blocos da solução geral
-    </figcaption>
-  </figure>
+  <figure>  
+    <img src="images/readme/logica_do_jogo_img.png" width="600px">
+    
+<figcaption>
+
+**Figura 13** - Esquema em blocos da solução geral
+    </figcaption>
+  </figure>
 </div>
 
 A aplicação integra módulos para o gerenciamento de hardware (botões, mouse, acelerômetro) e lógica do jogo. Threads específicas são responsáveis por ações como movimentação dos elementos e detecção de colisões.
@@ -864,8 +945,6 @@ int main() {
 
 </details>
 
-<details>
-  <summary><b>Algoritmos do Jogo</b></summary>
 
 ### Algoritmos do Jogo
 
@@ -876,7 +955,7 @@ A criação de novos sprites é feita por meio de uma matriz que define os pixel
 
 #### **Movimento e Ações do Jogador**
 - **Movimentação**:
-  - Jogadores controlam seus carros ou alvos com base no acelerômetro (jogador 2) ou no mouse (jogador 1).
+  - Jogadores controlam seus alvos com base no acelerômetro (jogador 2) ou no mouse (jogador 1).
   - A posição no eixo X é calculada de acordo com a entrada do dispositivo.
 - **Destruição de Meteoros**:
   - Jogadores podem destruir meteoros quando o alto colide com eles. Foi escolhido simbolizar que ao tocar no Meteoro um disparo é efetuado. O motivo dessa decisão foi pois, apesar de ser possível clicar no mouse para efetuar disparos, no caso do Player 1, no entanto, no caso do Player 2 que é controlado pelo acelerômetro não seria ergonomicamente confortável clicar num dos pushbuttons para disparar. Além do fato que cada pushbutton já tem uma função no menu, o que, apesar de ter soluções para isso como tipos diferentes de cliques no botão, causaria outros desafios.
@@ -892,10 +971,20 @@ Meteoros são gerados aleatoriamente no topo da tela com velocidades e direçõe
 - Meteoros se movem em linha reta com velocidades constantes.
 - O plano de fundo simula movimento com estrelas piscando e corpos celestes em órbitas predefinidas.
 
-</details>
+#### **Movimentação do plano de fundo**
 
-<details>
-  <summary><b>Fluxo do Jogo</b></summary>
+Para passar a sensação de movimento corpos celestiais giram em órbitas, cada um em uma órbida diferente de acordo com a Figura 1. Além disso, estrelas brilham a intervalos regulares em locais aleatórios da tela.
+
+<div align="center">
+  <figure>  
+    <img src="images/readme/celestial_bodies_orbits.png" width="600px">
+    
+<figcaption>
+
+**Figura 14** - Tragetória das órbitas dos corpos celestes que se movimentam no background
+    </figcaption>
+  </figure>
+</div>
 
 ### Fluxo do Jogo
 
@@ -916,7 +1005,35 @@ O jogo segue o fluxo descrito abaixo:
 - Todas as threads são criadas na inicialização e pausadas ou finalizadas conforme necessário.
 - Ao encerrar o jogo, as threads são finalizadas para liberar recursos.
 
-</details>
+#### **Diagrama do Fluxo do Jogo**
+O diagrama abaixo descreve o fluxo de execução do jogo
+
+<div align="center">
+  <figure>  
+    <img src="images/readme/estados_jogo_img.png" width="600px">
+    
+<figcaption>
+
+**Figura 15** - Fluxo de execução do Jogo
+    </figcaption>
+  </figure>
+</div>
+
+Para garantir que o jogo responda aos comandos de maneira eficaz e com um bom aproveitamento do hardware, o software foi divido em threads. Cada thread possui uma reponsabilidade de maneira que uma não interfere diretamente no funcionamento de outra.
+> O único momento que uma thread vem a interferir no funcionamento das demais é durante o acesso a variáveis compartilhadas
+
+#### **Tabela de Threads Criadas e suas Responsabilidades**
+A tabela abaixo descreve as threads criadas e suas responsabilidades:
+
+Thread              |                  Responsabilidade
+:----------------------|:-----------------------------
+_Polling do mouse do jogador 1_| Realiza a leitura dos eventos do mouse e realiza o tratamento dessas entradas
+_Polling do acelerômetro do jogador 2_| Realiza a leitura das aferições do acelerômetro e realiza o tratamento desses valores
+_Atualização dos corpos celestes no background_ | Faz a atualização dos corpos celestes na tela para criar impressão de movimento
+_Verificação de colisão_ | Responsavel por verificar a colisão e fazer a checagem de condição de vitória ou derrota
+Geração de meteoros | Gera os meteoros na tela e faz a atualização de suas posições
+_Menu_ | Menu do jogo, fica rodando durante o jogo realizando a captua das entradas dos botões da FPGA
+
 
 
 
@@ -942,13 +1059,16 @@ Foram realizados testes para verificar:
 - Funcionamento do menu e das animações.
 - Controle dos alvos por mouse e acelerômetro.
 
+
 <div align="center">
-  <figure>
-    <img src="images/readme/videos/game_demo.gif">
-    <figcaption>
-      **Figura 13** - Atualização da pontuação ao destruir um meteoro
-    </figcaption>
-  </figure>
+  <figure>  
+    <img src="images/readme/videos/game_demo.gif">
+    
+<figcaption>
+
+**Figura 16** - Atualização da pontuação ao destruir um meteoro
+    </figcaption>
+  </figure>
 </div>
 
 </details>
