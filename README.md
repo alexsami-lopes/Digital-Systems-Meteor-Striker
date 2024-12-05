@@ -653,7 +653,7 @@ O sistema utiliza o driver `/dev/mem` para acessar os registradores da FPGA via 
    - Chama `mapping_fpga` para mapear os endereços de memória da FPGA para o espaço de usuário.
 
 2. **`mapping_fpga`**:
-   - Usa `mmap` para mapear 4 KB de memória FPGA a partir do endereço base `0xFF200000`.
+   - Usa `mmap` para mapear 256 bytes de memória FPGA a partir do endereço base `0xFF200000`.
    - Define ponteiros para os registradores mapeados, como `DATA_A`, `DATA_B`, e `WR_FULL`.
 
 3. **`unmapping_fpga`**:
