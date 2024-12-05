@@ -593,11 +593,11 @@ A seguir, são apresentadas as interfaces exibidas para o jogador no monitor VGA
 
 ### Elementos do Jogo
 
-O jogo utiliza sprites para representar elementos como meteoros, alvos, corpos celestes, estrelas, números e elementos do menu. A Figura 12 ilustra um exemplo desses sprites.
+O jogo utiliza sprites para representar elementos como meteoros, alvos, corpos celestes, estrelas, números e elementos do menu. A Figura 12 ilustra alguns exemplos desses sprites e backgrounds.
 
 <div align="center">
   <figure>  
-    <img src="images/readme/sprite_de1-soc_img.png" width="600px">
+    <img src="images/readme/main_sprites.png" width="600px">
     
 <figcaption>
 
